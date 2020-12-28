@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../password-generator/pg.css">
 </head>
 <body>
-    <!--made a conainer and row with height 100, and aligned all items to center-->
+    <!--made a container and row with height 100, and aligned all items to center-->
     <div class="container h-100">
         <div class="row h-100 justify-content-center align-items-center">
             <form>
@@ -23,6 +23,9 @@
                    </div>
                </div>
                <br>
+               <!--made a label with password length min of 10-20 characters-->
+               <label id="passLengthLabel" for="passLenght">Password Length</label>
+               <input type="range" min="10" max="20" class="form-control-range" id="passlength">
             </form>
 
         </div>
