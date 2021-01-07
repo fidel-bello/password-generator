@@ -38,17 +38,27 @@ function generatePassword () {
       confirmNumeric= confirm("would you like numbers?");
     }
     //stored array into selected characters
-    if (confirmUpper= true){
-      pwdOut.push(lower);
+    if (confirmUpper=== true){
+      for (var i = 0; i < upper.length; i++){
+        pwdOut.push(upper[i])
     }
-    if (confirmLower=true){
-      pwdOut.push(upper);
+      
+    
+    if (confirmLower===true){
+      for(var i= 0; i < lower.length; i++){
+      pwdOut.push(lower[i]);
+      }
     }
     if (confirmSpecial=true){
-      pwdOut.push(special);
+      for (var i=0; i < special.length;i++){
+
+      pwdOut.push(special[i]);
+      }
     }
     if (confirmNumeric= true){
-      pwdOut.push(numeric);
+      for(var i= 0; i < numeric.length; i++){
+      pwdOut.push(numeric[i]);
+      }
     }
   for(var i=0; i < confirmLength; i++){
     var randomArray;
@@ -62,19 +72,16 @@ function generatePassword () {
     randomChar= selectedArray[randomNum];
     confirmLength+=randomChar;
   }
-  passwordText.value= passwordString;
+    return passwordString;
   }
 
 
 // Write password to the #password input
 function writePassword() {
+
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-}
-var passwordText = document.querySelector("#password");
-
-function writePassword(legnth, upper, lower, numeric, special){
-
+  var passwordText = document.querySelector("#password")
+  passwordText.value= password;
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
