@@ -3,6 +3,7 @@ var generateBtn = document.querySelector("#generate");
 //created even listener for the generate btn
 generateBtn.addEventListener ('click', generatePassword);
 //arrays
+var pwdOut=[]
 var numeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var special = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
 var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -27,6 +28,7 @@ function generatePassword () {
     confirmLower= confirm("would you like lower case letters?");
     confirmSpecial= confirm("would you like special characters?");
     confirmNumeric= confirm("would you like numbers?");
+    //added loop for canceled variables, user must retry
     while (confirmUpper== false && confirmLower== false && confirmSpecial== false && confirmNumeric== false ) {
       alert("it is recommended to at least use one of the given criteria");
       confirmUpper= confirm("would you like uppercase letters?");
