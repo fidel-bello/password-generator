@@ -13,5 +13,5 @@
 * stored array into selected characters
 * linked script. js into the html
 # Screen shots
-![image of the app](homeworkimg)
-![image of the app](homeworkimg2)
+![image of the app](https://user-images.githubusercontent.com/73322116/103941339-b2ff7980-50fc-11eb-95f1-92342f4e5c87.png)
+![image of the app](https://user-images.githubusercontent.com/73322116/103941422-cf031b00-50fc-11eb-9788-20dfefa4f353.png)
