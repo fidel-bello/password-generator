@@ -36,6 +36,19 @@ function generatePassword () {
       confirmSpecial= confirm("would you like special characters?");
       confirmNumeric= confirm("would you like numbers?");
     }
+    //stored array into selected characters
+    if (confirmUpper= true){
+      pwdOut.push(lower);
+    }
+    if (confirmLower=true){
+      pwdOut.push(upper);
+    }
+    if (confirmSpecial=true){
+      pwdOut.push(special);
+    }
+    if (confirmNumeric= true){
+      pwdOut.push(numeric);
+    }
   }
 
 
