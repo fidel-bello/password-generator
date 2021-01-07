@@ -13,5 +13,5 @@
 * stored array into selected characters
 * linked script. js into the html
 # Screen shots
-![image of the app](C:\Users\fidel\Videos\Captures\homeworkimg)
-![image of the app](C:\Users\fidel\Videos\Captures\homeworkimg2)
+![image of the app](homeworkimg)
+![image of the app](homeworkimg2)
