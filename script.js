@@ -33,13 +33,13 @@ function generatePassword () {
     confirmSpecial= confirm("would you like special characters?");
     confirmNumeric= confirm("would you like numbers?");
     //added loop for canceled variables, user must retry
-    /*while (confirmUpper== false && confirmLower== false && confirmSpecial== false && confirmNumeric== false ) {
+    while (confirmUpper== false && confirmLower== false && confirmSpecial== false && confirmNumeric== false ) {
       alert("it is recommended to at least use one of the given criteria");
       confirmUpper= confirm("would you like uppercase letters?");
       confirmLower= confirm("would you like lower case letters?");
       confirmSpecial= confirm("would you like special characters?");
       confirmNumeric= confirm("would you like numbers?");
-    }*/
+    };
     //stored array into selected characters
     if (confirmUpper=== true){
       for (var i = 0; i < upper.length; i++){
