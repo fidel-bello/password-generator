@@ -56,7 +56,7 @@ function generatePassword () {
     var randomNum;
     var randomChar;
     //random number generator
-    randomArray= parseInt(math.floor(Math.random()*pwdOut.length));
+    randomArray= parseInt(Math.floor(Math.random()*pwdOut.length));
     selectedArray= pwdOut[randomArray];
     randomNum=Math.floor(Math.random()*selectedArray.legnth);
     randomChar= selectedArray[randomNum];
