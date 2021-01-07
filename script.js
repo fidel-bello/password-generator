@@ -17,6 +17,7 @@ var confirmSpecial;
 var confirmNumeric;
 //added prompts
 function generatePassword () {
+  var passwordString="";
   var confirmLength = parseInt(prompt("how many? at least 8 and no more than 128"));
   if(confirmLength <= 7 || confirmLength >= 129) {
     alert("must be between 8-128!");
@@ -53,9 +54,13 @@ function generatePassword () {
     var randomArray;
     var selectedArray;
     var randomNum;
-    var RandomChar;
+    var randomChar;
     //random number generator
     randomArray= parseInt(math.floor(Math.random()*pwdOut.length));
+    selectedArray= pwdOut[randomArray];
+    randomNum=Math.floor(Math.random()*selectedArray.legnth);
+    randomChar= selectedArray[randomNum];
+    passwordString+=randomChar;
   }
   }
 
