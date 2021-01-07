@@ -16,12 +16,17 @@ var confirmNumeric;
 function generatePassword () {
   var pwdOut= [];
   var passwordString = "";
-  var confirmLength = parseInt(prompt("how many? at least 8 and no more than 128"));
+  var confirmLength;
   /*if(confirmLength <= 7 || confirmLength >= 129) {
     alert("must be between 8-128!");
     var confirmLength = parseInt(prompt("how many characters?"));
   }*/
-    alert(`your password will contain ${confirmLength} characters`);
+  do {
+    confirmLength = parseInt(prompt("how many? at least 8 and no more than 128"));
+  }
+  while(confirmLength <=7 || confirmLength >=129 || !Number.isInteger(confirmLength)){
+
+  }
     //added confirm prompts for criteria of the password
     confirmUpper= confirm("would you like uppercase letters?");
     confirmLower= confirm("would you like lower case letters?");
