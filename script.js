@@ -17,10 +17,7 @@ function generatePassword () {
   var pwdOut= [];
   var passwordString = "";
   var confirmLength;
-  /*if(confirmLength <= 7 || confirmLength >= 129) {
-    alert("must be between 8-128!");
-    var confirmLength = parseInt(prompt("how many characters?"));
-  }*/
+  
   do {
     confirmLength = parseInt(prompt("how many? at least 8 and no more than 128"));
   }
@@ -69,7 +66,7 @@ function generatePassword () {
    }
   console.log(passwordString);
     return passwordString;
-  }
+  };
 
 // Write password to the #password input
 function writePassword() {
