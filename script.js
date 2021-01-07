@@ -16,10 +16,10 @@ var confirmSpecial;
 var confirmNumeric;
 //added prompts
 function generatePassword () {
-  var confirmLength = (prompt("how many? at least 8 and no more than 128"));
-  while(confirmLength <= 7 || confirmLength >= 129) {
+  var confirmLength = parseInt(prompt("how many? at least 8 and no more than 128"));
+  if(confirmLength <= 7 || confirmLength >= 129) {
     alert("must be between 8-128!");
-    var confirmLength = (prompt("how many characters?"));
+    var confirmLength = parseInt(prompt("how many characters?"));
   }
     alert(`your password will contain ${confirmLength} characters`);
     //added confirm prompts for criteria of the password
@@ -27,7 +27,14 @@ function generatePassword () {
     confirmLower= confirm("would you like lower case letters?");
     confirmSpecial= confirm("would you like special characters?");
     confirmNumeric= confirm("would you like numbers?");
-}
+    while (confirmUpper== false && confirmLower== false && confirmSpecial== false && confirmNumeric== false ) {
+      alert("it is recommended to at least use one of the given criteria");
+      confirmUpper= confirm("would you like uppercase letters?");
+      confirmLower= confirm("would you like lower case letters?");
+      confirmSpecial= confirm("would you like special characters?");
+      confirmNumeric= confirm("would you like numbers?");
+    }
+  }
 
 
 // Write password to the #password input
