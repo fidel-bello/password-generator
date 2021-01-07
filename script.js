@@ -49,6 +49,14 @@ function generatePassword () {
     if (confirmNumeric= true){
       pwdOut.push(numeric);
     }
+  for(var i=0; i < confirmLength; i++){
+    var randomArray;
+    var selectedArray;
+    var randomNum;
+    var RandomChar;
+    //random number generator
+    randomArray= parseInt(math.floor(Math.random()*pwdOut.length));
+  }
   }
 
 
