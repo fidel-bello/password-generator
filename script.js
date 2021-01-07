@@ -17,7 +17,7 @@ function generatePassword () {
   var pwdOut= [];
   var passwordString = "";
   var confirmLength;
-  
+
   do {
     confirmLength = parseInt(prompt("how many? at least 8 and no more than 128"));
   }
@@ -29,7 +29,7 @@ function generatePassword () {
     confirmLower= confirm("would you like lower case letters?");
     confirmSpecial= confirm("would you like special characters?");
     confirmNumeric= confirm("would you like numbers?");
-    //added loop for canceled variables, user must retry
+    //added loop for canceled prompts, user must retry
     while (confirmUpper== false && confirmLower== false && confirmSpecial== false && confirmNumeric== false ) {
       alert("it is recommended to at least use one of the given criteria");
       confirmUpper= confirm("would you like uppercase letters?");
