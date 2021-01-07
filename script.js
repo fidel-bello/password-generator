@@ -16,8 +16,15 @@ var confirmSpecial;
 var confirmNumeric;
 
 function generatePassword () {
-  var confirmLength = (prompt("how many? at least 8 and no more than 128"))
+  var confirmLength = (prompt("how many? at least 8 and no more than 128"));
+  while(confirmLength <= 7 || confirmLength >= 129) {
+    alert("must be between 8-128!");
+    var confirmLength = (prompt("how many characters?"));
+  }
+    alert(`your password will contain ${confirmLength} characters`)
+  
 }
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
