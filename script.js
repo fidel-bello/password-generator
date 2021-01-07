@@ -10,14 +10,14 @@ var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n
 var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 //console.log(numeric, special, lower, upper)
 //declarations
-var confirmLength = ""
+var confirmLength = "";
 var confirmUpper;
 var confirmLower;
 var confirmSpecial;
 var confirmNumeric;
 //added prompts
 function generatePassword () {
-  var passwordString="";
+  var passwordString = "";
   var confirmLength = parseInt(prompt("how many? at least 8 and no more than 128"));
   if(confirmLength <= 7 || confirmLength >= 129) {
     alert("must be between 8-128!");
@@ -58,10 +58,11 @@ function generatePassword () {
     //random number generator
     randomArray= parseInt(Math.floor(Math.random()*pwdOut.length));
     selectedArray= pwdOut[randomArray];
-    randomNum=Math.floor(Math.random()*selectedArray.legnth);
+    randomNum=Math.floor(Math.random()*selectedArray.length);
     randomChar= selectedArray[randomNum];
-    passwordString+=randomChar;
+    confirmLength+=randomChar;
   }
+  passwordText.value= passwordString;
   }
 
 
@@ -69,10 +70,9 @@ function generatePassword () {
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
 }
+var passwordText = document.querySelector("#password");
+
 function writePassword(legnth, upper, lower, numeric, special){
 
 }
