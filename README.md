@@ -7,7 +7,7 @@
 * general information 2
 * screenshots
 # installation
-please visit deployed website at https://fidel-bello.github.io/password-generator/
+* please visit deployed website at https://fidel-bello.github.io/password-generator/
 # general information
 
 * Our project this new year was to make a random password generator from a given html code using Java script. The application should prompt certain critera for the password when the user clicks the 'generate' button. after the user correctly selects the criteria, then a password should be generated and is displayed in an alert or written in the page.
